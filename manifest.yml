@@ -1,0 +1,8 @@
+---
+applications:
+- name: pcf-poc-springboot
+  memory: 1G
+  random-route: true
+  path: build/libs/pcf-poc-springboot.jar
+
+
