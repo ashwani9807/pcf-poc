@@ -11,4 +11,11 @@ public class FirstBootController {
 	{
 		return "Hello There!!!";
 	}
+	
+	@RequestMapping(name="/")
+	public String getVersion()
+	{
+		return "Hello There!!!";
+	}
+	
 }
