@@ -30,7 +30,7 @@ public class MasterConfiguration {
 	  public Docket swaggerSpringMvcPlugin() {
 	    return new Docket(DocumentationType.SWAGGER_2)
 	    		.select()                                  
-		        .apis(RequestHandlerSelectors.any())              
+		        .apis(RequestHandlerSelectors.basePackage("com.ashwani"))              
 		        .paths(PathSelectors.any())                          
 		        .build(); 
 	  }

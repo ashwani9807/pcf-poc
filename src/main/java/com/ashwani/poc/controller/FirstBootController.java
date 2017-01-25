@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
+@RequestMapping(value = "api")
 public class FirstBootController {
 
     @ApiOperation(
