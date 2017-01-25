@@ -8,14 +8,31 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ashwani.poc.models.CredentialsSource;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 public class FirstBootController {
 
-	@RequestMapping(name="/")
+    @ApiOperation(
+            value = "POC for PCF",
+            httpMethod = "GET"
+    )
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "OK")})
+	@RequestMapping(name="/hello")
 	public String getWelcomeMessage() throws IOException
 	{
-		Map<String, Object> extraCredentials = new CredentialsSource("SERVICE_INSTANCE").getExtraCredentials();
-		System.out.println("Keys are "+extraCredentials.keySet());
-		return "Hello There V1!!!Name : "+extraCredentials.get("username") + " and Password is "+extraCredentials.get("password");
+    	String message = "DEFAULT";
+    	try{
+    		Map<String, Object> extraCredentials = new CredentialsSource("SERVICE_INSTANCE").getExtraCredentials();
+    		System.out.println("Keys are "+extraCredentials.keySet());
+    		message = "Hello There V1!!!Name : "+extraCredentials.get("username") + " and Password is "+extraCredentials.get("password");
+    	}catch(Exception e)
+    	{
+    		e.printStackTrace();
+    	}
+    	return message;
 	}
 }
