@@ -24,5 +24,10 @@ cf stop bootPOC
 cf delete bootPOC_old -f
 cf rename bootPOC bootPOC_old 
 cf rename bootPOC-test bootPOC 
+
+
+Swagger Documentation: http://greenpoc.cfapps.io/swagger-ui.html
+
+App URL : http://greenpoc.cfapps.io/api/
     
 
