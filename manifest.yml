@@ -4,5 +4,7 @@ applications:
   memory: 1G
   random-route: true
   path: build/libs/pcf-poc-springboot.jar
+  services:
+  - SERVICE_INSTANCE
 
 

@@ -12,9 +12,6 @@ public class UserProvidedService {
     @JsonProperty("name")
     String name;
     
-    @JsonProperty("password")
-    String password;
-
     @JsonProperty("label")
     String label;
 
@@ -35,10 +32,6 @@ public class UserProvidedService {
         return label;
     }
 
-    public String getPassword() {
-		return password;
-	}
-    
     public List<String> getTags() {
         return tags;
     }
