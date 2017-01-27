@@ -1,5 +1,5 @@
 Create user provided service
-cf cups SERVICE_INSTANCE -p '{"name":"db_details", "username":"admin","password":"pa55woRD"}'
+cf cups SERVICE_INSTANCE -p '{"name":"SERVICE_INSTANCE", "username":"admin","password":"pa55woRD"}'
 
 cf unmap-route pcf-poc-springboot  cfapps.io --hostname tempArun
 cf map-route aruntemp-poc cfapps.io -n tempArun
