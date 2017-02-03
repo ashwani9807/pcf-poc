@@ -29,7 +29,7 @@ public class FirstBootController {
     	try{
     		Map<String, Object> extraCredentials = new CredentialsSource("SERVICE_INSTANCE").getExtraCredentials();
     		System.out.println("Keys are "+extraCredentials.keySet());
-    		message = "Hello There V1!!!Name : "+extraCredentials.get("username") + " and Password is "+extraCredentials.get("password");
+    		message = "Hello There V1!!!Name : "+extraCredentials.get("username") + " and Password is :";
     	}catch(Exception e)
     	{
     		e.printStackTrace();
