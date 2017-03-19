@@ -61,6 +61,14 @@ public class StreamPOC {
 			}
 		};
 		
+		Consumer<List<String>> changeToUpper = consumeStrings.andThen(new Consumer<List<String>>() {
+			@Override
+			public void accept(List<String> t) {
+				t.stream().forEach(string -> System.out.println(string.toUpperCase()) );
+			}
+		});
+		
 		consumeStrings.accept(StreamPOC.usingStreams(Arrays.asList("A","Apple","Ball")));	
+		changeToUpper.accept(StreamPOC.usingStreams(Arrays.asList("A","Apple","Ball")));
 	}
 }
